@@ -1,0 +1,3 @@
+USAF-WBAN_ID STATION NAME                   COUNTRY                                            STATE 			      LATITUDE LONGITUDE ELEVATION
+------------ ------------------------------ -------------------------------------------------- ------------------------------ -------- --------- ---------
+725340 14819 CHICAGO MIDWAY INTL ARPT       UNITED STATES                                      ILLINOIS                        +41.786  -087.752   +0186.5

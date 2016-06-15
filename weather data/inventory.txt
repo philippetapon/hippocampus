@@ -1,0 +1,5 @@
+725340 14819 CHICAGO MIDWAY INTL ARPT       2015 1133 1011 1051  996 1054 1112 1015 1010  974  995 1063 1192
+
+
+Total Surface Hourly Observations Available: 12606
+Total Station-Years: 1

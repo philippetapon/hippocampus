@@ -1,0 +1,91 @@
+ICD-10-CM code (American),diagnosis,DSM5 CATEGORY
+F01.51,Vascular dementia with behavioral disturbance,NC
+F05,Delirium due to known physiological condition,NC
+F06.0,Psychotic disorder with hallucinations due to known physiological condition,SS
+F06.31,Mood disorder due to known physiological condition with depressive features,DD
+F06.32,Mood disorder due to known physiological condition with major depressive-like episode,DD
+F10.14,Alcohol abuse with alcohol-induced mood disorder,AD
+F10.20,"Alcohol dependence, uncomplicated",AD
+F10.21,"Alcohol dependence, in remission",AD
+F10.24,Alcohol dependence with alcohol-induced mood disorder,AD
+F10.251,Alcohol dependence with alcohol-induced psychotic disorder with hallucinations,AD
+F10.99,"Alcohol use, unspecified with unspecified alcohol-induced disorder",AD
+F11.20,"Opioid dependence, uncomplicated",AD
+F11.24,Opioid dependence with opioid-induced mood disorder,AD
+F11.99,"Opioid use, unspecified with unspecified opioid-induced disorder",AD
+F12.20,"Cannabis dependence, uncomplicated",AD
+F12.259,"Cannabis dependence with psychotic disorder, unspecified",AD
+F12.99,"Cannabis use, unspecified with unspecified cannabis-induced disorder",AD
+F13.20,"Sedative, hypnotic or anxiolytic dependence, uncomplicated",AD
+F13.99,"Sedative, hypnotic or anxiolytic use, unspecified with unspecified sedative, hypnotic or anxiolytic-induced disorder",AD
+F14.20,"Cocaine dependence, uncomplicated",AD
+F14.24,Cocaine dependence with cocaine-induced mood disorder,AD
+F14.259,"Cocaine dependence with cocaine-induced psychotic disorder, unspecified",AD
+F14.94,"Cocaine use, unspecified with cocaine-induced mood disorder",AD
+F14.99,"Cocaine use, unspecified with unspecified cocaine-induced disorder",AD
+F15.259,"Other stimulant dependence with stimulant-induced psychotic disorder, unspecified",AD
+F15.99,"Other stimulant use, unspecified with unspecified stimulant-induced disorder",AD
+F16.20,"Hallucinogen dependence, uncomplicated",AD
+F17.200,"Nicotine dependence, unspecified, uncomplicated",AD
+F19.94,"Other psychoactive substance use, unspecified with psychoactive substance-induced mood disorder",DD
+F19.980,"Other psychoactive substance use, unspecified with psychoactive substance-induced anxiety disorder",XD
+F20.0,Paranoid schizophrenia,SS
+F20.2,Catatonic schizophrenia,SS
+F20.9,"Schizophrenia, unspecified",SS
+F21,Schizotypal disorder,SS
+F22,Delusional disorder,SS
+F23,Brief psychotic disorder,SS
+F25.0,"Schizoaffective disorder, bipolar type",SS
+F25.1,"Schizoaffective disorder, depressive type",SS
+F25.9,"Schizoaffective disorder, unspecified",SS
+F29,Unspecified psychosis not due to a substance or known physiological condition,SS
+F30.8,Other manic episodes,BP
+F30.9,"Manic episode, unspecified",BD
+F31.10,"Bipolar disorder, current episode manic without psychotic features, unspecified",BD
+F31.13,"Bipolar disorder, current episode manic without psychotic features, severe",BD
+F31.2,"Bipolar disorder, current episode manic severe with psychotic features",BD
+F31.32,"Bipolar disorder, current episode depressed, moderate",BD
+F31.4,"Bipolar disorder, current episode depressed, severe, without psychotic features",BD
+F31.5,"Bipolar disorder, current episode depressed, severe, with psychotic features",BD
+F31.60,"Bipolar disorder, current episode mixed, unspecified",BD
+F31.64,"Bipolar disorder, current episode mixed, severe, with psychotic features",BD
+F31.81,Bipolar II disorder,BD
+F31.9,"Bipolar disorder, unspecified",BD
+F32.1,"Major depressive disorder, single episode, moderate",DD
+F32.2,"Major depressive disorder, single episode, severe without psychotic features",DD
+F32.3,"Major depressive disorder, single episode, severe with psychotic features",DD
+F32.5,"Major depressive disorder, single episode, in full remission",DD
+F32.9,"Major depressive disorder, single episode, unspecified (311)",DD
+F33.1,"Major depressive disorder, recurrent, moderate",DD
+F33.2,"Major depressive disorder, recurrent severe without psychotic features",DD
+F33.3,"Major depressive disorder, recurrent, severe with psychotic symptoms",DD
+F33.40,"Major depressive disorder, recurrent, in remission, unspecified",DD
+F33.9,"Major depressive disorder, recurrent, unspecified",DD
+F39,Unspecified mood [affective] disorder,DD
+F41.0,Panic disorder [episodic paroxysmal anxiety] without agoraphobia,XD
+F41.1,Generalized anxiety disorder,XD
+F41.9,"Anxiety disorder, unspecified",XD
+F42,Obsessive-compulsive disorder,OD
+F43.0,Acute stress reaction,TD
+F43.10,"Post-traumatic stress disorder, unspecified",TD
+F43.12,"Post-traumatic stress disorder, chronic",TD
+F43.20,"Adjustment disorder, unspecified",TD
+F43.21,Adjustment disorder with depressed mood,TD
+F43.22,Adjustment disorder with anxiety,TD
+F43.25,Adjustment disorder with mixed disturbance of emotions and conduct,TD
+F44.6,Conversion disorder with sensory symptom or deficit,OT
+F44.8,Other dissociative and conversion disorders,DI
+F50.2,Bulimia nervosa,ED
+F60.2,Antisocial personality disorder,PD
+F60.3,Borderline personality disorder,PD
+F60.9,"Personality disorder, unspecified",PD
+F63.9,"Impulse disorder, unspecified",ID
+F70,Mild intellectual disabilities,ND
+F71,Moderate intellectual disabilities,ND
+F84.0,Autistic disorder,ND
+F90.9,"Attention-deficit hyperactivity disorder, unspecified type",ND
+G31.83,Dementia with Lewy bodies,NC
+G31.9,"Degenerative disease of nervous system, unspecified",NC
+G47.00,"Insomnia, unspecified",OT
+Z71.1,Person with feared health complaint in whom no diagnosis is made,OT
+Z76.5,Malingerer [conscious simulation],MA
