@@ -14,7 +14,7 @@
 # Import the datetime library that we will use later    
 import datetime
 
-# This incredible one-line command creates an array, instantly, of the entire CSV file.  
+# This incredible one-line command creates an weatherObservations, instantly, of the entire CSV file.  
 stringed_array_weather = tuple(open('weatherdata.csv', 'r'))
 
 # Set up constants 
@@ -22,7 +22,7 @@ second = 0
 GMT_offset = datetime.timedelta(hours=-5)
 
 counter = 0
-array = []
+weatherObservations = []
 
 # The maximum number of observations has to be set to some number fewer than the
 # rows of the weatherdata.csv 
@@ -65,27 +65,76 @@ while counter < maximum_number_of_observations:
     gmt_minute = current_string[10:12]
     minute = int(float(gmt_minute))
 
-# create the array    
+# create the weatherObservations    
     current_datetime = datetime.datetime(year, month, day, hour, minute, second)
     
 # substract the GMT offset to get it to local Chicago time    
     current_datetime = current_datetime + GMT_offset
     
-# Now create the line of the array containing all the elements, "in the hopper"  
+# Now create the line of the weatherObservations containing all the elements, "in the hopper"  
     array_in_the_hopper = [counter,current_datetime,temperature,pressure]
 #   print array_in_the_hopper[0],array_in_the_hopper[1],array_in_the_hopper[2],array_in_the_hopper[3]
     print array_in_the_hopper[0],",",array_in_the_hopper[1],",",array_in_the_hopper[2],",",array_in_the_hopper[3]
 
-# Now add that line in the hopper to the array. This array consists of a list of lists. 
-    array.append(array_in_the_hopper)
+# Now add that line in the hopper to the weatherObservations. This weatherObservations consists of a list of lists. 
+    weatherObservations.append(array_in_the_hopper)
     
 # And advance the counter
     counter = counter + 1
     
+#Let's see if we can come up with an weatherObservations of rolling averages for weatherDays
+
+#convenience function we're going to use
+def listMean(listToMean):
+    accum = 0
+    for l in listToMean:
+        accum += l
+    return accum / len(listToMean)
 
 
+class Observation:
+    def __init__(self, date, temp, pressure):
+        self.date = date
+        self.temp = temp
+        self.pressure = pressure
+
+    def toString(self):
+        return self.date.strftime("%B %d, %Y") + " Temp: "+ str(self.temp) + " Pressure: " + str(self.pressure)
 
 
+dailyObservationAccumulator = []
+
+observationIndex = 0
+while observationIndex < len(weatherObservations):
+    temps = []
+    pressures = []
+    initialObservationDate = weatherObservations[observationIndex][1]
+    finalObservationDate = initialObservationDate
+
+    while True:
+        if observationIndex > len(weatherObservations)-1:
+            break
+
+        thisObs = weatherObservations[observationIndex]
+        if thisObs[1] - initialObservationDate > datetime.timedelta(days=1):
+            #break out of the inner for loop
+            break
+
+        # add this observation's temp and pressure to temps and pressures,
+        # then iterate
+        temps.append(thisObs[2])
+        pressures.append(thisObs[3])
+        finalObservationDate = thisObs[1]
+        observationIndex = observationIndex + 1
+
+    dailyMeanTemp = listMean(temps)
+    dailyMeanPressure = listMean(pressures)
+
+    averageDay = Observation(finalObservationDate, dailyMeanTemp, dailyMeanPressure)
+    dailyObservationAccumulator.append(averageDay)
+
+for do in dailyObservationAccumulator:
+    print do.toString()
 
 # In[26]:
 
@@ -104,7 +153,7 @@ outer_counter = 0
 # the maximum number of observations was set by the previous cell. 
 
 while outer_counter < maximum_number_of_observations:
-    base = array[outer_counter]
+    base = weatherObservations[outer_counter]
 #   print base
     while inner_counter < 4:
         man_on_base = base[inner_counter]
@@ -125,9 +174,9 @@ offset = 1
 # the datetime is within offset of 1
 within_offset = 1
 
-start_line_of_array = array[starting_block]
+start_line_of_array = weatherObservations[starting_block]
 print start_line_of_array
-next_line_of_array = array[offset]
+next_line_of_array = weatherObservations[offset]
 print next_line_of_array
 
 first_datetime = start_line_of_array[within_offset]
@@ -155,11 +204,11 @@ delta = datetime.timedelta(seconds=1)
 
 while delta < one_day:
     print delta
-    array_in_the_hopper = array[outer_counter]
+    array_in_the_hopper = weatherObservations[outer_counter]
     anchor_date_time = array_in_the_hopper[date_place]
 
     inner_counter = inner_counter + 1
-    further_array = array[inner_counter] 
+    further_array = weatherObservations[inner_counter] 
     aweigh_date_time = further_array[date_place]
 
     print anchor_date_time
